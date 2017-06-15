@@ -48,7 +48,7 @@ Open your browser and visit the link given above, [http://127.0.0.1:5000](http:/
 which is the return value of the `hello()` function in the script.
 9\. Now that we have our `Hello, world!` example running, let's add some pretend data to the application.
 
-Add the following before teh `app.run()` portion of your script:
+Add the following before the `app.run()` portion of your script:
 
 ```python
 
