@@ -4,8 +4,7 @@ from flask import request, jsonify
 app = flask.Flask(__name__)
 
 
-# Create a "dummy" list of dictionaries that will serve as our data.
-# Most applications would pull in data from a file or database instead.
+# Create some test data for our catalog in the form of a list of dictionaries.
 books = [
     {'id': 0,
      'title': 'A Fire Upon the Deep',
@@ -31,15 +30,14 @@ def home():
 <p>A prototype API for distant reading of science fiction novels.</p>'''
 
 
-@app.route('/api/v1/all', methods=['GET'])
+# A route to return all of the available entries in our catalog.
+@app.route('/api/v1/resources/books/all', methods=['GET'])
 def api_all():
     return jsonify(books)
 
 
-@app.route('/api/v1', methods=['GET'])
+@app.route('/api/v1/resources/books', methods=['GET'])
 def api_id():
-
-
     # Check if an ID was provided as part of the URL.
     # If ID is provided, assign it to a variable.
     # If no ID is provided, display an error in the browser.
